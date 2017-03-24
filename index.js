@@ -11,7 +11,11 @@ const FCM = {};
 
 FCM.getInitialNotification = () => {
     return RNFIRMessaging.getInitialNotification();
-}
+};
+
+FCM.unregisterToken = () => {
+  return RNFIRMessaging.unregisterToken();
+};
 
 FCM.getFCMToken = () => {
     return RNFIRMessaging.getFCMToken();
