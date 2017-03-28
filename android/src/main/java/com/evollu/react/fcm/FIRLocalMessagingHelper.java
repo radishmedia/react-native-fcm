@@ -112,7 +112,7 @@ public class FIRLocalMessagingHelper {
             notification.setSmallIcon(smallIconResId);
 
             //large icon
-            String largeIcon = bundle.getString("large-icon", "ic_launcher");
+            String largeIcon = bundle.getString("large_icon", "ic_launcher");
             if(largeIcon != null && android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP){
                 if (largeIcon.startsWith("http://") || largeIcon.startsWith("https://")) {
                     Bitmap bitmap = getBitmapFromURL(largeIcon);
