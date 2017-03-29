@@ -28,6 +28,7 @@ import android.util.Log;
 
 import android.content.Context;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Set;
@@ -66,6 +67,15 @@ public class FIRMessagingModule extends ReactContextBaseJavaModule implements Li
 
     @ReactMethod
     public void requestPermissions(){
+    }
+
+    @ReactMethod
+    public void unregisterToken() {
+        try {
+            FirebaseInstanceId.getInstance().deleteInstanceId();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @ReactMethod
